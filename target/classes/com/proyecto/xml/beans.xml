@@ -3,7 +3,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="mundo" class="com.proyecto.beans.Mundo">
-		<property name="saludo"  value="Hola Mundo Loco...!!"></property>
+	<bean id="persona" class="com.proyecto.beans.Persona">
+		<constructor-arg value="1"></constructor-arg>
+		<constructor-arg value="Marcos"></constructor-arg>
+		<constructor-arg value="Ingeniero"></constructor-arg>
 	</bean>
+	
 </beans>
