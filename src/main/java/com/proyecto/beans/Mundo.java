@@ -1,6 +1,9 @@
 package com.proyecto.beans;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class Mundo {
+	@Value("Hola Mundo..!!")
 	public String saludo;
 
 	public String getSaludo() {
