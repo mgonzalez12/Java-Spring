@@ -1,6 +1,6 @@
 package com.proyecto.beans;
 
-import  javax.annotation.*;
+//import  javax.annotation.*;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
@@ -59,11 +59,11 @@ public class Persona implements InitializingBean, DisposableBean {
 
 	public void afterPropertiesSet() throws Exception {
 		// TODO Auto-generated method stub
-		System.out.println("Antes de inicializar el beans Persona");
+		System.out.println("init beans Persona");
 	}
 	public void destroy() throws Exception {
 		// TODO Auto-generated method stub
-		System.out.println(" el beans Persona esta a punto de ser destruido");
+		System.out.println(" destroy beans Persona ");
 	}
 	
 	
