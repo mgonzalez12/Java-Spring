@@ -4,38 +4,22 @@
  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 	
-	<bean id="persona" class="com.proyecto.beans.Persona">
-		<property name="pais">
-			<bean id="pais" class="com.proyecto.beans.Pais">
-				<property name="nombre" value="peru"></property>
-				<property name="ciudades">
-					<list>
-						<ref bean="ciudad1"/>
-						<ref bean="ciudad2"/>
-						<ref bean="ciudad3"/>
-					</list>
-				</property>
-				
-			</bean>
-		</property>
+	<bean id="persona" class="com.proyecto.beans.Persona" autowire="byName">
+		<property name="pais" ref="pais"></property>
+		<property name="ciudad" ref="ciudad"></property>
 		<property name="id" value="1"></property>
 		<property name="nombre" value="Marcos"></property>
 		<property name="apodo" value="Ingeniero"></property>
 		
 	</bean>
 	
-	<bean id="ciudad1" class="com.proyecto.beans.Ciudad">
+	<bean id="pais" class="com.proyecto.beans.Pais">
+		<property name="nombre" value="peru"></property>
+		
+	</bean>
+	
+	<bean id="ciudad" class="com.proyecto.beans.Ciudad">
 		<property name="nombre" value="Lima"></property>
 	</bean>
-	
-	<bean id="ciudad2" class="com.proyecto.beans.Ciudad">
-		<property name="nombre" value="Piura"></property>
-	</bean>
-	
-	<bean id="ciudad3" class="com.proyecto.beans.Ciudad">
-		<property name="nombre" value="Chiclayo"></property>
-	</bean>
-
-	
     
 </beans>
