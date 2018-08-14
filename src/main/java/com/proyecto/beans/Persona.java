@@ -1,5 +1,7 @@
 package com.proyecto.beans;
 
+import  javax.annotation.*;
+
 public class Persona {
 	
 	private int id;
@@ -9,10 +11,12 @@ public class Persona {
 	private Ciudad ciudad;
 	
 	// metodo de ciclo de vida beans
+	@PostConstruct
 	private void init(){
 		System.out.println("Antes de inicializar el beans Persona");
 	}
 	
+	@PreDestroy
 	private void destroy(){
 		System.out.println(" el beans Persona esta a punto de ser destruido");
 	}
