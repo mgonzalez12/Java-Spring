@@ -7,6 +7,15 @@ public class Persona {
 	private String apodo;
 	private Pais pais;
 	private Ciudad ciudad;
+	
+	// metodo de ciclo de vida beans
+	private void init(){
+		System.out.println("Antes de inicializar el beans Persona");
+	}
+	
+	private void destroy(){
+		System.out.println(" el beans Persona esta a punto de ser destruido");
+	}
 		
 	public Ciudad getCiudad() {
 		return ciudad;
