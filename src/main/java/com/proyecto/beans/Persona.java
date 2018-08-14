@@ -2,7 +2,10 @@ package com.proyecto.beans;
 
 import  javax.annotation.*;
 
-public class Persona {
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class Persona implements InitializingBean, DisposableBean {
 	
 	private int id;
 	private String nombre;
@@ -11,7 +14,7 @@ public class Persona {
 	private Ciudad ciudad;
 	
 	// metodo de ciclo de vida beans
-	@PostConstruct
+	/*@PostConstruct
 	private void init(){
 		System.out.println("Antes de inicializar el beans Persona");
 	}
@@ -19,7 +22,7 @@ public class Persona {
 	@PreDestroy
 	private void destroy(){
 		System.out.println(" el beans Persona esta a punto de ser destruido");
-	}
+	} */
 		
 	public Ciudad getCiudad() {
 		return ciudad;
@@ -52,6 +55,15 @@ public class Persona {
 	}
 	public void setApodo(String apodo) {
 		this.apodo = apodo;
+	}
+
+	public void afterPropertiesSet() throws Exception {
+		// TODO Auto-generated method stub
+		System.out.println("Antes de inicializar el beans Persona");
+	}
+	public void destroy() throws Exception {
+		// TODO Auto-generated method stub
+		System.out.println(" el beans Persona esta a punto de ser destruido");
 	}
 	
 	

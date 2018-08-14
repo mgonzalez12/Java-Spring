@@ -5,7 +5,6 @@
   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd"
   default-init-method="init" default-destroy-method="destroy">
 	
-	<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"></bean>
 	<bean id="persona" class="com.proyecto.beans.Persona" autowire="byName" >
 		<property name="pais" ref="pais"></property>
 		<property name="ciudad" ref="ciudad"></property>
