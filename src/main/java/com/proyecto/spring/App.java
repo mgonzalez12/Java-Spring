@@ -12,12 +12,14 @@ public class App {
 		Persona per = (Persona) appContext.getBean("persona");
 		Persona per2 = (Persona) appContext.getBean("persona");
 		
+		per.setId(1);
+		per.setNombre("Marcos");
+		per.setApodo("Ingeniero");
+		
 		System.out.println(per.getId()+" "+ per.getNombre()+" "+ per.getApodo()+" "+per.getPais().getNombre()+" "+per.getCiudad().getNombre());
 		System.out.println(per.getId()+" "+ per2.getNombre()+" "+ per2.getApodo()+" "+per2.getPais().getNombre()+" "+per2.getCiudad().getNombre());
 	
-			// los Scope beans singleton es la mista instancia - prototype son objetos diferentes
-		System.out.println(per);
-		System.out.println(per2);
+		
 	}
 
 }
