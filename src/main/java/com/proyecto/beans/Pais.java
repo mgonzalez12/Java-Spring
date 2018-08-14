@@ -1,9 +1,11 @@
 package com.proyecto.beans;
 
+import java.util.List;
+
 public class Pais {
 	
 	private String nombre;
-	private Cuidad cuidad;
+	private List<Ciudad>ciudades;
 
 	public String getNombre() {
 		return nombre;
@@ -13,13 +15,17 @@ public class Pais {
 		this.nombre = nombre;
 	}
 
-	public Cuidad getCuidad() {
-		return cuidad;
+	public List<Ciudad> getCiudades() {
+		return ciudades;
 	}
 
-	public void setCuidad(Cuidad cuidad) {
-		this.cuidad = cuidad;
+	public void setCiudades(List<Ciudad> ciudades) {
+		this.ciudades = ciudades;
 	}
+
+	
+
+	
 	
 	
 }

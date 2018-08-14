@@ -8,11 +8,14 @@
 		<property name="pais">
 			<bean id="pais" class="com.proyecto.beans.Pais">
 				<property name="nombre" value="peru"></property>
-				<property name="cuidad">
-					<bean id="cuidad" class="com.proyecto.beans.Cuidad">
-						<property name="nombre" value="Lima"></property>
-					</bean>
+				<property name="ciudades">
+					<list>
+						<ref bean="ciudad1"/>
+						<ref bean="ciudad2"/>
+						<ref bean="ciudad3"/>
+					</list>
 				</property>
+				
 			</bean>
 		</property>
 		<property name="id" value="1"></property>
@@ -21,8 +24,18 @@
 		
 	</bean>
 	
+	<bean id="ciudad1" class="com.proyecto.beans.Ciudad">
+		<property name="nombre" value="Lima"></property>
+	</bean>
 	
-	<alias name="persona" alias="personaBean"/>
+	<bean id="ciudad2" class="com.proyecto.beans.Ciudad">
+		<property name="nombre" value="Piura"></property>
+	</bean>
+	
+	<bean id="ciudad3" class="com.proyecto.beans.Ciudad">
+		<property name="nombre" value="Chiclayo"></property>
+	</bean>
+
 	
     
 </beans>
