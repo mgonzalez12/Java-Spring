@@ -22,7 +22,7 @@
 	</bean>
 	
 	
-	
+	<alias name="persona" alias="personaBean"/>
 	
     
 </beans>
