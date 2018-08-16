@@ -5,19 +5,20 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.proyecto.beans.Ciudad;
+import com.proyecto.beans.Jugador;
 import com.proyecto.beans.Persona;
+import com.proyecto.interfaces.IEquipo;
 
 public class App {
 
 	public static void main(String[] args) {
 		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/proyecto/xml/beans.xml");
-		Persona per = (Persona) appContext.getBean("persona");
+		//Jugador jug = (Jugador) appContext.getBean("messi");
+		IEquipo jug = (IEquipo) appContext.getBean("juventus");
 		
-		Ciudad ciu = (Ciudad) appContext.getBean("ciudad");
+//		System.out.println(jug.getNombre()+" "+ jug.getNumero()+" "+jug.getEquipo().mostrar());
 		
-		System.out.println( per.getApodo());
-		System.out.println( ciu.getNombre());
-
+		System.out.println(jug.mostrar());
 		((ConfigurableApplicationContext)appContext).close();
 		
 	}

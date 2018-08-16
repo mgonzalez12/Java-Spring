@@ -67,6 +67,6 @@ public class Persona implements InitializingBean, DisposableBean {
 	}
 	
 	
-	
+	// video 18 pendiente
 	
 }
