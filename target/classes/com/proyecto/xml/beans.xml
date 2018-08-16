@@ -5,10 +5,12 @@
   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd"
   default-init-method="init" default-destroy-method="destroy">
 	
+	<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"></bean>
+	
 	<bean id="messi" class="com.proyecto.beans.Jugador">
 		<property name="numero" value="10"> </property>
 		<property name="nombre" value="Leonel Messi"> </property>
-		<property name="equipo" ref="barcelona"> </property>
+		<property name="equipo" ref="barcelona"></property>
 	</bean>
     
     <bean id="barcelona" class="com.proyecto.beans.Barcelona"></bean>
