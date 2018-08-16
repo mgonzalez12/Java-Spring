@@ -3,15 +3,19 @@ package com.proyecto.beans;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Required;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import com.proyecto.interfaces.IEquipo;
-
+	
+@Component
 public class Jugador {
 	private int numero;
+	@Value("Messi")
 	private String nombre;
 	
 	@Autowired
-	@Qualifier("barcelonaQualifer")
+	//@Qualifier("barcelonaQualifer")
 	private IEquipo equipo;
 	
 	public int getNumero() {

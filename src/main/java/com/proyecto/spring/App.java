@@ -13,7 +13,7 @@ public class App {
 
 	public static void main(String[] args) {
 		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/proyecto/xml/beans.xml");
-		Jugador jug = (Jugador) appContext.getBean("messi");
+		Jugador jug = (Jugador) appContext.getBean("jugador");
 	   //IEquipo jug = (IEquipo) appContext.getBean("juventus");
 		
 		System.out.println(jug.getNombre()+" "+jug.getEquipo().mostrar());

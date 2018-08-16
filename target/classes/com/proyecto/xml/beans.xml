@@ -9,20 +9,6 @@
 	<!--  Reconoce cualquier anotacion de namera automatica -->
 	<context:annotation-config></context:annotation-config>
 	
-	<!-- para que reconozca estas anotaciones
-	 <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"></bean>
-	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"></bean>
-	-->
-	
-	<bean id="messi" class="com.proyecto.beans.Jugador">
-		<property name="numero" value="10"> </property>
-		<property name="nombre" value="Leonel Messi"> </property>
-		<!-- <property name="equipo" ref="barcelona"></property> -->
-	</bean>
-    
-    <!--  <bean id="equipo" class="com.proyecto.beans.Barcelona"></bean> -->
-    <bean id="barcelona" class="com.proyecto.beans.Barcelona">
-    	<qualifier value="barcelonaQualifer"></qualifier>
-    </bean>
-	<bean id="juventus" class="com.proyecto.beans.Juventus"></bean>
+	<context:component-scan base-package="com.proyecto.beans"></context:component-scan>
+   
 </beans>
